@@ -1,1 +1,1 @@
-# cs150_finalproject
+# Algorithmic Music Composition Final Project
