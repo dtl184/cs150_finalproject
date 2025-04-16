@@ -198,15 +198,17 @@ def main():
         for line in f_in:
             nucleotides += line.strip()
     
-    # Add chords to the first part object using translation
+    # Add chords to the first part object
     key_list = []
     curr_codon = ''
     for n in nucleotides:
+        # Transcription
         if n.lower() == 't':
             n = 'u'
         curr_codon += n.lower()
-        # If codon is size 3
+        # If codon is size 3, translate into amino acid
         if len(curr_codon) % 3 == 0:
+            # Translation
             amino_acid = get_mapping_output(TRANSLATION, curr_codon.lower())
             get_mapping_output(AMINO_ACID_TO_CHORD, amino_acid, chords, k, key_list)
             get_mapping_output(AMINO_ACID_TO_CHORD, 'R', chords, k, key_list)
