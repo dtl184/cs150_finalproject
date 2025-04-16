@@ -126,12 +126,12 @@ def get_mapping_output(mapping: dict, input: str, stream: Optional[stream.Part]=
 def main():
     # Build argument parser
     parser = argparse.ArgumentParser()
-    parser.add_argument('-rs', '--random_seed', type=int, help='random seed to use')
-    parser.add_argument('-k', '--key', type=str, help='key to generate the song in')
-    parser.add_argument('-f', '--filename', type=str, help='filename of .txt file where DNA is stored')
-    parser.add_argument('-m', '--midi', help='shows score in midi format', action='store_true')
-    parser.add_argument('-s', '--sheet_music', help='shows score as sheet music', action='store_true')
-    parser.add_argument('-t', '--text', help='shows score as text', action='store_true')
+    parser.add_argument('-rs', '--random_seed', type=int, help="Random seed to use. '-1' for no seed. Default is 42.")
+    parser.add_argument('-k', '--key', type=str, help="Key to generate the song in. Only accepts flats (ex: 'Eb'), no sharps. Default is 'C'.")
+    parser.add_argument('-f', '--filename', type=str, help="Filename of .txt file where DNA is stored (including extension). Default is 'SLIT1.txt'")
+    parser.add_argument('-m', '--midi', help='Shows score in midi format (flag argument).', action='store_true')
+    parser.add_argument('-s', '--sheet_music', help='Shows score as sheet music (flag argument).', action='store_true')
+    parser.add_argument('-t', '--text', help='Shows score as text (flag argument).', action='store_true')
     
     # Parse arguments, set up program
     args = parser.parse_args()
