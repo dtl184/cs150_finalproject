@@ -94,7 +94,7 @@ def generate_rhythm(bird_rhythms, target_duration):
 
     return output_rhythm
 
-def generate_bird_rhythm(target_duration, filepath='./Bird_Calls/score.xml'):
+def generate_bird_rhythm(target_duration, filepath='score.xml'):
     """
     API call function
     """
